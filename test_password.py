@@ -1,18 +1,37 @@
 import math
 class Password:
-
-
   def password_strength_test(self,entry_password):
       return None
-#      if len(entry_password)<8:
-#          print ("please enter valid length at least 8")
-#         return False
-
   def password_alpha_test(self,entry_password):
-
       return False
   def password_digit_test(self,entry_password):
       return False
+class User_name:
+    def __init__(self):
+        self.name={}
+    def validate_user(self,items):
+        return None
+    def modify_address(self,address):
+        return None
+    def modify_password(self,password):
+        return None
+    def forget_password(self,email):
+        return None
+user_name = User_name()
+def test_validate_user_password():
+    valid_user_password={'liuwenbo':'abc1234567','hellohellohello':'123456fghd'}
+    for item in valid_user_password:
+        assert user_name.validate_user(item)==True,"valid user name and password shall pass"
+def test_invalidate_user_password():
+    invalid_user_password={'liuwenbo':'none','hellohellohello':'none'}
+    for item in invalid_user_password:
+        assert user_name.validate_user(item)==False, "invalid user name and password shall not pass"
+def test_modify_address():
+    new_address='3050 erin center blvd mississauga L5M0P5'
+    assert user_name.modify_address(new_address)==new_address," new address should be saved"
+def test_mofify_password():
+    new_password="123456789asdfcv"
+    assert user_name.modify_password(new_password)==new_password,"new password should be saved"
 def test_password_strength():
     password = Password()
     entry_password=[
@@ -20,14 +39,12 @@ def test_password_strength():
         'asdfgh23344',
         'none3345gh',
     ]
-
     for entry in entry_password:
         if len(entry)>9:
             assert password.password_strength_test(entry) == True," password format should have a length of more than 9"
 def test_password_alph():
     password = Password()
     entry_password=[
-
         'asdfgh23344',
         'none3345gh',
     ]
@@ -36,7 +53,6 @@ def test_password_alph():
 def test_password_digit():
     password = Password()
     entry_password = [
-
         'asdfgh23344',
         'none3345gh',
     ]
@@ -44,6 +60,6 @@ def test_password_digit():
         assert password.password_digit_test(entry), "password format should have at least 1 digit"
 
 
-##    assert password.password_strength_test('123456')==False," the password should have length of at least 8"
-#    assert password.password_alpha_test('123456')==False, "the password should have alphabet"
- #   assert password.password_digit_test("abcdefghjj")==False, 'the password should have digit'
+
+
+
