@@ -9,6 +9,7 @@ class Password:
 class User_name:
     def __init__(self):
         self.name={}
+
     def validate_user(self,items):
         return None
     def modify_address(self,address):
