@@ -19,14 +19,16 @@ class Tip:
 cart=Cart()
 delivery_order = Delivery_order(cart.calculate_subtotal_before_tax(), cart.calculate_total_amount())
 point=Points
+# this is to test requirement 6.2.5	    Tip option:
 def test_tip_amount():
     tip=Tip()
     assert tip.add_tip_10_percent(100)==10," tip amount should be 10% of toal amount if it is selected"
-
+# this is to test requirement 6.2.3 	Minimum amount setting:
 def test_cart_amount_valid():
 
     assert delivery_order.verify_delivery_order_valid()," delivery order amount before tax must be more than valid"
-def test_points_deposit():
+#this is to test requirement 6.1.6 status monitoring
+def test_status_cart():
     assert cart.change_status()," after carts cleared, status shall change"
 def test_added_delivery_charge():
 

@@ -7,6 +7,7 @@ class Delivery_order:
     def verify_delivery_charge(self):
         return 0
 delivery_order=Delivery_order(106,101)
+#this is to test requirement 6.2.2 	Delivery charges:
 def test_deliverycharge():
     assert delivery_order.verify_delivery_charge()==delivery_order.total_amount-delivery_order.subtotal_amount," delivery cahrge should always be added"
 def test_deliverycharge_amount():

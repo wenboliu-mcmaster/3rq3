@@ -9,6 +9,7 @@ class Points:
     def display_balance(self):
         return self.balance
 point=Points()
+# the following is to test requirement 6.1.7:Collecting and redemption of points
 def test_points():
 
     assert point.display_balance()==0,  " all user shall start with 0 points "

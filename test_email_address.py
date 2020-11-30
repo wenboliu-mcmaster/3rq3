@@ -6,7 +6,7 @@ class Email:
         return None
     def email_change_valid(self,symbols):
         return None
-
+#this is requirement test for forget password by email registering 
 def test_email_format_invalid():
     email=Email()
     unaccepted_symbol=[

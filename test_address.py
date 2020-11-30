@@ -2,6 +2,7 @@
 class Address_Book:
     def postcode_check(self,postcode):  # delivery address validated by checking the postcode against saved data
         return None
+# this is to test requirement 6.2.1 Delivery address verification:
 def test_address_check():
     valid_Address_postcode = [
         'L5M0P3',

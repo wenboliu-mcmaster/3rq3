@@ -18,6 +18,7 @@ class User_name:
     def forget_password(self,email):
         return None
 user_name = User_name()
+# this is to test requirement 6.1.2	 Create your profile
 def test_validate_user_password():
     valid_user_password={'liuwenbo':'abc1234567','hellohellohello':'123456fghd'}
     for item in valid_user_password:
@@ -26,12 +27,15 @@ def test_invalidate_user_password():
     invalid_user_password={'liuwenbo':'none','hellohellohello':'none'}
     for item in invalid_user_password:
         assert user_name.validate_user(item)==False, "invalid user name and password shall not pass"
+# this is to test requirement 6.1.3	Modify your profile
 def test_modify_address():
     new_address='3050 erin center blvd mississauga L5M0P5'
     assert user_name.modify_address(new_address)==new_address," new address should be saved"
+# this is to test requirement 6.1.4 Forget Password
 def test_mofify_password():
     new_password="123456789asdfcv"
     assert user_name.modify_password(new_password)==new_password,"new password should be saved"
+# this is to test requirement 6.1.5  password reset
 def test_password_strength():
     password = Password()
     entry_password=[
